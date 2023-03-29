@@ -3,10 +3,10 @@ For this challenge, I built a test-driven Java program which takes an array of i
 
 
 ## Task
-This is for a company that designs plugins for digital audio workstations (DAWs). They want to design a plugin that helps musicians who write electronic music and want to apply filters to their tracks to change how they sound. Build a bandpass filter to make this possible.
+This is for a company that designs plugins for digital audio workstations (DAWs). The company wants to design a plugin that helps musicians who write electronic music and want to apply filters to their tracks to change how they sound. Build a bandpass filter to make this possible.
 - The filter should take a soundwave and return a soundwave of the same length
 - The soundwave is an array of frequencies, for which each frequency is an integer
-- The filter has default upper (1000) and lower limits (40) and any values out of this range are brought to these limits
+- The filter has default upper (1000) and lower limits (40) and any frequency values out of this range are brought to these limits
 
 
 ## Input/Output Table
