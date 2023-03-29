@@ -1,7 +1,12 @@
 package sound;
 
+
 public class BandpassFilter {
     public int[] filterSoundwaves(int[] soundwaves) {
+        if (soundwaves instanceof int[] == false) {
+            throw new IllegalArgumentException("Input must be an array of integers");
+        }
+
         if (soundwaves.length == 0) {
             throw new IllegalArgumentException("No frequencies have been supplied");
         }

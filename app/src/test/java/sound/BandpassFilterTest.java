@@ -52,4 +52,18 @@ public class BandpassFilterTest {
       
           assertTrue(actualMessage.contains(expectedMessage));
     }
+
+    @Test public void testThrowsErrorWhenGivenNullData() {
+        BandpassFilter bandpassFilter = new BandpassFilter();
+        int[] soundwaves = null;
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            bandpassFilter.filterSoundwaves(soundwaves);
+          });
+      
+          String expectedMessage = "Input must be an array of integers";
+          String actualMessage = exception.getMessage();
+      
+          assertTrue(actualMessage.contains(expectedMessage));
+    }
 }
