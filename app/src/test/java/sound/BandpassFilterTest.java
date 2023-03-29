@@ -38,4 +38,18 @@ public class BandpassFilterTest {
         int[] expectedValues = { 1000, 100 };
         assertArrayEquals(bandpassFilter.filterSoundwaves(soundwaves), expectedValues);
     }
+
+    @Test public void testThrowsErrorWhenGivenEmptyArray() {
+        BandpassFilter bandpassFilter = new BandpassFilter();
+        int[] soundwaves = {};
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            bandpassFilter.filterSoundwaves(soundwaves);
+          });
+      
+          String expectedMessage = "No frequencies have been supplied";
+          String actualMessage = exception.getMessage();
+      
+          assertTrue(actualMessage.contains(expectedMessage));
+    }
 }
