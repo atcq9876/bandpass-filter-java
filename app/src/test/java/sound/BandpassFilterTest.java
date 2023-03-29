@@ -31,4 +31,11 @@ public class BandpassFilterTest {
         int[] expectedValues = { 40, 100 };
         assertArrayEquals(bandpassFilter.filterSoundwaves(soundwaves), expectedValues);
     }
+
+    @Test public void testOneValidAndOneHighNumber() {
+        BandpassFilter bandpassFilter = new BandpassFilter();
+        int[] soundwaves = { 1100, 100 };
+        int[] expectedValues = { 1000, 100 };
+        assertArrayEquals(bandpassFilter.filterSoundwaves(soundwaves), expectedValues);
+    }
 }

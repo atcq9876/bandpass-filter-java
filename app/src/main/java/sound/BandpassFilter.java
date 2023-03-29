@@ -1,7 +1,5 @@
 package sound;
 
-import java.util.ArrayList;
-
 public class BandpassFilter {
     public int[] filterSoundwaves(int[] soundwaves) {
         int[] filteredSoundwaves = new int[soundwaves.length];
@@ -15,15 +13,5 @@ public class BandpassFilter {
             }
         }
         return filteredSoundwaves;
-        
-        // if (soundwaves[0] < 40) {
-        //     int[] soundwave = { 40 };
-        //     return soundwave;
-        // } else if (soundwaves[0] > 1000) {
-        //     int[] soundwave = { 1000 };
-        //     return soundwave;
-        // } else {       
-        //     return soundwaves;
-        // }
     }
 }
